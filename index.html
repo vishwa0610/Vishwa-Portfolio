@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishwa — Frontend Developer</title>
+  <meta name="description" content="Vishwa — Frontend Developer passionate about building beautiful, fast, and user-friendly web applications with modern technologies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Vishwa<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#resume" class="btn btn-primary nav-resume">Resume</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <canvas id="particleCanvas"></canvas>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-dot-grid"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-up" style="--delay:0ms">
+          <span class="pulse-dot"></span>
+          Available for opportunities
+        </div>
+        <p class="hero-greeting animate-fade-up" style="--delay:100ms">Hello, I'm</p>
+        <h1 class="hero-name animate-fade-up" style="--delay:200ms">Vishwa</h1>
+        <div class="hero-typewriter animate-fade-up" style="--delay:300ms">
+          <span id="typewriterText"></span><span class="tw-cursor">|</span>
+        </div>
+        <p class="hero-bio animate-fade-up" style="--delay:400ms">
+          Passionate developer dedicated to creating beautiful, fast, and user-friendly web applications with modern technologies.
+        </p>
+        <div class="hero-cta animate-fade-up" style="--delay:500ms">
+          <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+          <a href="#contact" class="btn btn-outline btn-lg">Get In Touch</a>
+        </div>
+        <div class="hero-socials animate-fade-up" style="--delay:600ms">
+          <a href="https://github.com/vishwa0610" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vishwa-k-45ba49258" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:vishwakv762@gmail.com" class="social-icon" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about section" id="about">
+    <div class="about-bg" aria-hidden="true">
+      <div class="about-orb about-orb-1"></div>
+      <div class="about-orb about-orb-2"></div>
+      <div class="about-orb about-orb-3"></div>
+      <div class="about-grid-pattern"></div>
+    </div>
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual animate-fade-right" style="--delay:100ms">
+          <div class="avatar-wrap">
+            <div class="avatar-ring"></div>
+            <img src="images/profile.jpg" alt="Profile photo" class="avatar-photo" />
+            <div class="avatar-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Open to work
+            </div>
+          </div>
+        </div>
+        <div class="about-text animate-fade-left" style="--delay:200ms">
+          <h3 class="about-subtitle">Turning ideas into <span class="gradient-text">digital reality</span></h3>
+          <p>
+            To obtain a challenging position in the IT industry where I can improve my technical skills, contribute to innovative projects, and grow professionally.
+          </p>
+          <div class="about-actions">
+            <a href="#" class="btn btn-primary" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <span class="section-tag">What I work with</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card glass-card animate-fade-up" style="--delay:0ms">
+          <div class="skill-card-header">
+            <div class="skill-icon skill-icon-violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="chip-group">
+            <span class="chip chip-violet">HTML</span>
+            <span class="chip chip-violet">CSS</span>
+            <span class="chip chip-violet">JavaScript</span>
+            <span class="chip chip-violet">React</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-desc">A selection of projects that showcase my skills and passion for building great products.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card glass-card animate-flip-up" style="--delay:0ms">
+          <div class="project-header" style="--grad: linear-gradient(135deg, #7c3aed, #2563eb)">
+            <span class="project-number">01</span>
+            <div class="project-overlay">
+              <a href="https://github.com/vishwa0610" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light">GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">OwnerBot</h3>
+            <p class="project-desc">Blockchain-based encrypted data security service for cloud storage. Provides secure, decentralized management of encrypted data with access control, audit trails, and ownership verification via smart contracts — ensuring data integrity and trust in outsourced storage environments.</p>
+            <div class="project-tags">
+              <span class="project-tag">Blockchain</span>
+              <span class="project-tag">Smart Contracts</span>
+              <span class="project-tag">Cloud Storage</span>
+              <span class="project-tag">Encryption</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/vishwa0610" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESUME CTA ===================== -->
+  <section class="resume-cta section" id="resume">
+    <div class="container">
+      <div class="resume-card animate-scale-up">
+        <div class="resume-glow"></div>
+        <div class="resume-content">
+          <span class="section-tag">Open to opportunities</span>
+          <h2 class="resume-title">Let's Build Something <span class="gradient-text">Amazing Together</span></h2>
+          <p class="resume-desc">I'm currently available for freelance projects and full-time positions. If you have an exciting opportunity or just want to say hi, my inbox is always open.</p>
+          <div class="resume-actions">
+            <a href="#" class="btn btn-primary btn-lg" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header animate-fade-up">
+        <span class="section-tag">Get in touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-desc">Have a project in mind or just want to chat? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info animate-fade-right" style="--delay:100ms">
+          <h3 class="contact-info-title">Contact Information</h3>
+          <p class="contact-info-desc">Feel free to reach out through any of these channels. I typically respond within 24 hours.</p>
+
+          <div class="contact-items">
+            <div class="contact-item animate-fade-up" style="--delay:150ms">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">Email</span>
+                <a href="mailto:vishwakv762@gmail.com" class="contact-item-value">vishwakv762@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item animate-fade-up" style="--delay:250ms">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">Phone</span>
+                <a href="tel:+918838035667" class="contact-item-value">+91 8838035667</a>
+              </div>
+            </div>
+            <div class="contact-item animate-fade-up" style="--delay:350ms">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">Location</span>
+                <span class="contact-item-value">Chennai, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials animate-fade-up" style="--delay:450ms">
+            <a href="https://github.com/vishwa0610" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/vishwa-k-45ba49258" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap animate-fade-left" style="--delay:100ms">
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or just say hello..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="nav-logo footer-logo animate-fade-up" style="--delay:0ms">
+          <span class="logo-bracket">&lt;</span>Vishwa<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-copy animate-fade-up" style="--delay:100ms">&copy; 2026 Vishwa. Crafted with passion and coffee.</p>
+        <nav class="footer-links animate-fade-up" style="--delay:200ms">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastMsg">Message sent successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
